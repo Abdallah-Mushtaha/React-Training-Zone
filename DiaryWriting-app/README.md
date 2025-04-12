@@ -83,6 +83,6 @@ The exported data is saved as `dynamic-notes-backup.json` containing user tasks 
 
 ### **Contact Links:**
 
-Live Demo: [Dynamic-Notes-Appl](https://abdallah-mushtaha.github.io/Dynamic-Notes-Appl/)
+Live Demo: [Dynamic-Notes-Appl](https://react-training-zone.vercel.app/)
 
 - [GitHub](https://github.com/Abdallah-Mushtaha)
