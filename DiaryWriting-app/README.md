@@ -78,8 +78,9 @@ The exported data is saved as `dynamic-notes-backup.json` containing user tasks 
 ### **Technologies Used:**
 
 - **React**
-- **CSS**
+- **React Advanced**
 - **JavaScript**
+- **Tailwind CSS**
 
 ### **Contact Links:**
 
