@@ -104,16 +104,16 @@ export default function Layout() {
               >
                 Home
               </Link>
+              <Link
+                to="/Settings"
+                className="setting w-10 h-10 bg-gray-100 dark-mode:bg-gray-700 flex items-center justify-center rounded-md cursor-pointer hover:bg-gray-600 transition-all"
+                onClick={() =>
+                  asideElement.current.classList.remove("show-Aside")
+                }
+              >
+                <i className="fa-solid fa-gear flex items-center justify-center"></i>
+              </Link>
             </div>
-            <Link
-              to="/Settings"
-              className="setting w-10 h-10 bg-gray-100 dark-mode:bg-gray-700 flex items-center justify-center rounded-md cursor-pointer hover:bg-gray-600 transition-all"
-              onClick={() =>
-                asideElement.current.classList.remove("show-Aside")
-              }
-            >
-              <i className="fa-solid fa-gear flex items-center justify-center"></i>
-            </Link>
           </aside>
         </div>
       </div>

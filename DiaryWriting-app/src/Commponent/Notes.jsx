@@ -1,3 +1,4 @@
+import { set } from "date-fns";
 import { useEffect, useRef, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router";
 
@@ -292,7 +293,9 @@ export default function Notes() {
                         : settings.darkMode
                         ? "#ffffff"
                         : "#000000",
-                    boxShadow: `rgb(66 66 66) 0px 5px 8px`,
+                    boxShadow: `0px 8px 13px ${
+                      settings.darkMode ? "rgb(73 73 73)" : "#000000"
+                    } `,
                     direction: isArabic ? "rtl" : "ltr",
                     textAlign: isArabic ? "right" : "left",
                   }}
