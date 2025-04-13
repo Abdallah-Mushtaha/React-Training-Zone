@@ -209,6 +209,9 @@ aside.aside.w-30.h-auto.bg-gray-100.dark-mode\:bg-gray-800.text-white.flex.flex-
   align-items: baseline;
   gap: 35px;
 }
+.TaskHeroFlex.flex.justify-center.items-center.h-50 {
+  padding-top: 33%;
+}
 
 /* end of Edite and custom mobile common layout */
 
@@ -235,5 +238,8 @@ aside.aside.w-30.h-auto.bg-gray-100.dark-mode\:bg-gray-800.text-white.flex.flex-
   a.setting.w-10.h-10.bg-gray-100.dark-mode\:bg-gray-700.flex.items-center.justify-center.rounded-md.cursor-pointer.hover\:bg-gray-600.transition-all {
     position: absolute;
     bottom: 20px;
+  }
+  .TaskHeroFlex.flex.justify-center.items-center.h-50 {
+    padding-top: 0%;
   }
 }
