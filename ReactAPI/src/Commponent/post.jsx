@@ -4,7 +4,7 @@ export default function Post() {
   const Api = "https://jsonplaceholder.typicode.com"; // API URL
   const [posts, setPosts] = useState([]); // State to hold posts
   const [loading, setLoading] = useState(true); // State to hold loading status
-  const [error, setErorr] = useState(); // we dont care about the Type of Error we just want to know if there is an error or not
+  const [error, setErorr] = useState(false); // we dont care about the Type of Error we just want to know if there is an error or not
   const [page, setPage] = useState(0);
 
   const AbortControllRef = useRef(null);
@@ -23,12 +23,13 @@ export default function Post() {
         }); // Fetch posts from the API
         const data = await response.json(); // Parse the response as JSON to get the data as Array of objects to act with it
         setPosts(data); // Set the posts in the state
+        setErorr(false); // Set error to false if fetching succeeds
       } catch (error) {
         if (error.name === "AbortError") {
           console.log("Aborted");
           return;
         } else {
-          setErorr(error); // Set error to true if fetching fails
+          setErorr(true); // Set error to true if fetching fails
         }
       } finally {
         // IF we forgot to set the loading to false after fetching the data if there is an error or not the app will be stuck in the loading state forever and the user will not be able to see the data
