@@ -62,7 +62,7 @@ export default function Post() {
         ) : error === true ? (
           <div className="container mx-auto p-4 bg-gray-100 rounded-lg shadow-md mt-10">
             <img
-              src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExaXZtMTA4ajFkdDFpNDkxeWtqYjF1ajdleXpzaWE5c245Z20yNXRhcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/UoeaPqYrimha6rdTFV/giphy.gif"
+              src="public/giphy.gif"
               alt="Erorr"
               className="mx-auto w-1/2 object-fit-cover"
             />
