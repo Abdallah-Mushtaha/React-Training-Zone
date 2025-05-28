@@ -1,8 +1,8 @@
 # Design Patterns in React
 
-Example Featching Data Masseges ::
-
 # 1.Single Responsible Principle ::
+
+Example Featching Data Masseges ::
 
 The simple Design Patterns in React is a collection of reusable design patterns that can be used in React projects.
 its mean when u quering your components in React u should always bulid your components with ideas that evrey
@@ -91,6 +91,6 @@ all the code will be moved to the custem Hooks defrent files which make is more 
 
 this make your component more reusable and more testable more easy to debug and more easy to mantain
 
-# Note ::
+# Important Note out the code ::
 
 This code may not work now because I used it as an example, but in terms of logic and logic, I understand the design pattern in React and its forms. I will modify the code and apply it in future projects, not because of laziness on my part, but because of online university studies in palistian "Gaza" are exhausting..
