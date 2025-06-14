@@ -1,4 +1,4 @@
-# My React Projects Repository
+# My React Projects Second Training With First Training project
 
 This repository showcases my journey in learning React.js through practical projects.
 

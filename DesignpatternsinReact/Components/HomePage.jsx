@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PosteFeed from "./PosteFeed";
 const HomePage = () => {
   // const [Postes , setPostes ] = useState([]);
   const [Postes, setPostes] = useState([]);
