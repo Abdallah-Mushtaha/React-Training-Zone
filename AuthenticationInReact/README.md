@@ -9,7 +9,7 @@ will going be ricked sokme attacker can access your user data .
 As we see here user interAction with the React application and the application will send requests to the server
 and the server will handle the request and send response to the React application and the React application will show the response to the user.
 
-![alt text](/Authentication%20in%20%20React/src/assets/JWT.png)
+![alt text](/AuthenticationInReact/src/assets/JWT.png)
 
 in this case there is no direct connection between the user and the server and the server is not aware of the user.
 
