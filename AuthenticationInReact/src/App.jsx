@@ -1,15 +1,16 @@
+// src/App.js
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import LoginUI from "./Components/LoginUI";
+import Profile from "./Components/Proile";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [isLogin, setIsLogin] = useState(!!localStorage.getItem("token"));
 
   return (
-    <>
-      <h1>Authentication in React with JWTs, Access & Refresh Tokens</h1>
-    </>
+    <div className="container mx-auto w-screen h-screen flex flex-col justify-center items-center">
+      <h1 className="text-3xl font-bold text-blue-400 mb-6">Authentication</h1>
+      {isLogin ? <Profile /> : <LoginUI onlogin={() => setIsLogin(true)} />}
+    </div>
   );
 }
 
