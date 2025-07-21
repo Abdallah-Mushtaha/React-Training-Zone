@@ -4,7 +4,7 @@
 export const TestUser = {
     name: "Abood",
     // will use this specific role to determine if they have the correct role to access specific resources in application
-    role: "admin",
+    role: "user",
 };
 
 export async function getUser() {

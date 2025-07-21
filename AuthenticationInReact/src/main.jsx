@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import { StrictMode } from "react";
 import App from "./App";
 import { AuthContextProvider } from "./Components/AuthanticationProvider";
+import ProtectedRoute from "./Components/ProtectedRoute";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -13,7 +14,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/protected",
-    element: <p> Protected</p>,
+    element: (
+      <ProtectedRoute allowedRoles={["admin", "user"]}>
+        <p> Protected</p>
+      </ProtectedRoute>
+    ),
   },
 ]);
 

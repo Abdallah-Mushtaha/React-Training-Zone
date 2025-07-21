@@ -1,6 +1,6 @@
 // In this page we will just handle the Authentication
-import React, { createContext, useState, useContext } from "react";
-import { login } from "../Auth";
+import React, { createContext, useState, useContext, useEffect } from "react";
+import { getUser, login } from "../Auth";
 
 // the Auth Function in Auth.js will return the authToken so may be we need to store in state or local storage in the AuthContext
 /*   the reason why need optional because maybe we need 3 different states 
@@ -22,6 +22,23 @@ export function AuthContextProvider({ children }) {
   const [authToken, setAuthToken] = useState(undefined); // the default value will be undefined because we don't know if the user is authenticated or not
   const [currentUser, setCurrentUser] = useState(undefined);
 
+  const fetchRole = async () => {
+    try {
+      const res = await getUser();
+      const authToken = res?.[1]?.authToken;
+      const user = res?.[1]?.user;
+
+      setAuthToken(authToken);
+      setCurrentUser(user);
+    } catch (error) {
+      setAuthToken(null);
+      setCurrentUser(null);
+    }
+  };
+
+  useEffect(() => {
+    fetchRole();
+  }, []);
   const handleLogin = async () => {
     try {
       const res = await login();
