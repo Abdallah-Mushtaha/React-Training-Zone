@@ -17,7 +17,8 @@ export default function SignUp() {
     try {
       const data = await fakeRegister({ username, password });
       login(data);
-      navigator("/User");
+
+      navigator("/login");
     } catch (error) {
       setError(error?.message || error);
     }
@@ -26,10 +27,7 @@ export default function SignUp() {
   return (
     <div className="flex flex-col justify-center items-center h-screen">
       <h1 className="text-3xl font-bold text-blue-400 ">Sign Up</h1>
-      <form
-        onSubmit={handelSignUp}
-        className="flex flex-col gap-3 mt-1 w-100 mt-5"
-      >
+      <form onSubmit={handelSignUp} className="flex flex-col gap-3  w-100 mt-5">
         <input
           className="bg-gray-200 p-5 w-100 rounded-md outline-none"
           type="text"
@@ -53,7 +51,11 @@ export default function SignUp() {
           Sign Up
         </button>
       </form>
-      {error && <p className="error text-red ">{error}</p>}
+      {error && (
+        <p className="error text-red-500 transition-all text-sm  w-32 flex justify-start  mt-4 items-start ">
+          {error}
+        </p>
+      )}
     </div>
   );
 }

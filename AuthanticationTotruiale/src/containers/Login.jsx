@@ -33,6 +33,7 @@ export default function Login() {
       console.log("Successfully logged in");
 
       //   if user is admin will redirect to admin page otherwise will redirect to user page
+
       navigator(data.role === "admin" ? "/Admin" : "/User");
     } catch (error) {
       setError(error?.message || error);
@@ -63,11 +64,14 @@ export default function Login() {
           />
           <Link
             to="/SignUp"
-            className="text-gray-600 transition-all text-xs flex justify-end hover:text-gray-400 py-2"
+            className="text-gray-600 transition-all text-xs flex justify-end hover:text-gray-400 py-2 w-auto"
           >
             Dont have an account ?
           </Link>
-          <button type="submit" className="bg-amber-200  p-3 w-50 rounded-2xl">
+          <button
+            type="submit"
+            className="bg-blue-200 hover:bg-blue-300  p-3 w-50 rounded-2xl"
+          >
             Login
           </button>
           {error && (

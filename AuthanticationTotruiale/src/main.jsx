@@ -5,7 +5,7 @@ import Admin from "./containers/Admin.jsx";
 
 import Login from "./containers/Login.jsx";
 
-import User from "./containers/User.jsx";
+import User from "./containers/user.jsx";
 import "./index.css";
 import App from "./App.jsx";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router";
@@ -20,7 +20,14 @@ createRoot(document.getElementById("root")).render(
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/not-authorized" element={<NotAuthorized />} />
+          <Route
+            path="/not-authorized"
+            element={
+              <PrivateRoute allowedRoles={["admin", "user"]}>
+                <NotAuthorized />
+              </PrivateRoute>
+            }
+          />
           <Route path="*" element={<Navigate to="/" replace />} />
           <Route
             path="/admin"
