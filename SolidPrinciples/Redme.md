@@ -8,17 +8,21 @@ So to write Cleaner Code we have to follow the SOLID Principles.
 
 SOLID Principles there are 5 Principles "5 Roles".
 
-S - Single Responsibility Principle
-O - Open Closed Principle
-L - Liskov Substitution Principle
-I - Interface Segregation Principle
-D - Dependency Inversion Principle
+- S - Single Responsibility Principle
+
+- O - Open Closed Principle
+
+- L - Liskov Substitution Principle
+
+- I - Interface Segregation Principle
+
+- D - Dependency Inversion Principle
 
 # Single Responsibility Principle SRP
 
 Each component responsible for one responsibility "one job " only of the application
 Lets asoume that we have a component for Blog application
-![alt text](image.png 60x60)
+
 so we should write acomponent for blog post and another component for blog comment
 so we can add every thing in one commponent or we can sperate them in separate one
 
