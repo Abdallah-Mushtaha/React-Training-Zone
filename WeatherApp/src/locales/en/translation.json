@@ -1,0 +1,12 @@
+{
+  "placeholder": "Enter city, country or village (Arabic or English)",
+  "search": "Search",
+  "loading": "Loading...",
+  "errorInput": "Please enter a city, country or village name",
+  "errorGeneric": "An error occurred. Please try again.",
+  "errorNotFound": "Location not found. Try another name.",
+  "wind": "Wind Speed",
+  "humidity": "Humidity",
+  "noData": "Search for weather anywhere",
+  "toggleLang": "عربي"
+}
