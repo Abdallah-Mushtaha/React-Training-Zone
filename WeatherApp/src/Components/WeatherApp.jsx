@@ -1,17 +1,24 @@
-import { useState, useEffect } from "react";
-import { useTranslation } from "react-i18next";
-import "./i18n";
+import { useEffect, useContext } from "react";
 
+import "./i18n";
+import { StateContext } from "../context/StateContext";
 const API_KEY = "e79ca1b401f84bca8b8125519251208";
 
 export default function WeatherApp() {
-  const { t, i18n } = useTranslation();
-
-  const [query, setQuery] = useState("");
-  const [weather, setWeather] = useState(null);
-  const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
+  const {
+    t,
+    i18n,
+    query,
+    setQuery,
+    weather,
+    setWeather,
+    error,
+    setError,
+    loading,
+    setLoading,
+    darkMode,
+    setDarkMode,
+  } = useContext(StateContext);
 
   // Load saved language and theme from localStorage on mount
   useEffect(() => {
@@ -20,6 +27,7 @@ export default function WeatherApp() {
 
     const savedDark = localStorage.getItem("weatherDarkMode") === "true";
     setDarkMode(savedDark);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [i18n]);
 
   // Save dark mode setting to localStorage
@@ -129,7 +137,8 @@ export default function WeatherApp() {
           placeholder={t("placeholder")}
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          className="flex-grow p-3 text-lg outline-none"
+          className={`flex-grow p-3 text-lg outline-none
+    ${darkMode ? "placeholder-gray-400" : "placeholder-gray-700"}`}
           dir={i18n.language === "ar" ? "rtl" : "ltr"}
           aria-label={t("placeholder")}
           style={{
@@ -137,6 +146,7 @@ export default function WeatherApp() {
             color: darkMode ? "white" : "inherit",
           }}
         />
+
         <button
           type="submit"
           className="bg-yellow-400 hover:bg-yellow-500 px-5 font-semibold transition"

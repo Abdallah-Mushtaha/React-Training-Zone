@@ -1,9 +1,12 @@
 import WeatherApp from "./Components/WeatherApp.jsx";
+import StateProvider from "./context/StateContext.jsx";
 
 export default function App() {
   return (
     <>
-      <WeatherApp />
+      <StateProvider>
+        <WeatherApp />
+      </StateProvider>
     </>
   );
 }
