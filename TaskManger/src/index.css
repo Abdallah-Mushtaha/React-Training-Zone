@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+.login-section {
+  background-image: url("./images/bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  height: 100vh;
+}
+
+/* fallback hide scrollbar */
+.scrollbar-hide {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+  display: none !important;
+}
